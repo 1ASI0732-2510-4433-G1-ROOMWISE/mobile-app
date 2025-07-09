@@ -1,48 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <!-- Set the base URL for the Flutter app -->
   <base href="$FLUTTER_BASE_HREF">
+
+  <!-- Define the character encoding for the HTML document -->
   <meta charset="UTF-8">
+
+  <!-- Ensure compatibility with IE and enable Chrome rendering -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <!-- Provide a description for the app (for search engines, etc.) -->
   <meta name="description" content="A new Flutter project.">
 
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="sweetmanager">
+  <!-- iOS-specific meta tags to enable web app capabilities -->
+  <meta name="apple-mobile-web-app-capable" content="yes">  <!-- Enable full-screen mode on iOS -->
+  <meta name="mobile-web-app-capable" content="yes">  <!-- Enable mobile web app mode -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">  <!-- Set status bar style -->
+  <meta name="apple-mobile-web-app-title" content="sweetmanager">  <!-- Set the app's title for iOS devices -->
 
-  <!-- App icons -->
+  <!-- iOS app icon -->
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Set the favicon icon for browsers -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
+  <!-- Set the title of the app in the browser tab -->
   <title>sweetmanager</title>
+
+  <!-- Link to the manifest file that defines app settings (e.g., icons, splash screen) -->
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
+  <!-- Include the Flutter bootstrap script to load the Flutter app -->
   <script src="flutter_bootstrap.js" async></script>
 
   <!-- Firebase Initialization Script -->
   <script type="module">
-    // Import Firebase modules
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-analytics.js";
-    import { getStorage } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-storage.js";
+    // Import the required Firebase modules
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";  // Firebase core module
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-analytics.js";  // Firebase analytics module
+    import { getStorage } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-storage.js";  // Firebase storage module
 
-    // Firebase configuration
+    // Define the Firebase configuration object with the project's credentials
     const firebaseConfig = {
-      apiKey: "AIzaSyBTGEj8JZrWvn62ZtofnaGr-LluqliNXMc",
-      authDomain: "sweet-solutions.firebaseapp.com",
-      projectId: "sweet-solutions",
-      storageBucket: "sweet-solutions.appspot.com",
-      messagingSenderId: "180154492305",
-      appId: "1:180154492305:web:b156d317f56c1d4f34a630",
+      apiKey: "AIzaSyBTGEj8JZrWvn62ZtofnaGr-LluqliNXMc",  // Firebase API key
+      authDomain: "sweet-solutions.firebaseapp.com",  // Firebase auth domain
+      projectId: "sweet-solutions",  // Firebase project ID
+      storageBucket: "sweet-solutions.appspot.com",  // Firebase storage bucket URL
+      messagingSenderId: "180154492305",  // Firebase messaging sender ID
+      appId: "1:180154492305:web:b156d317f56c1d4f34a630",  // Firebase app ID
     };
 
-    // Initialize Firebase
+    // Initialize Firebase with the provided configuration
     const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-    const storage = getStorage(app);
+
+    // Initialize Firebase analytics and storage services
+    const analytics = getAnalytics(app);  // Initialize Firebase Analytics
+    const storage = getStorage(app);  // Initialize Firebase Storage
   </script>
 </body>
 </html>
