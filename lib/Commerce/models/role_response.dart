@@ -1,7 +1,9 @@
-
+// Define the RoleResponse class to represent a role response
 class RoleResponse {
-  String role;
-
-  RoleResponse({required this.role});
   
+  // Define the property to store the role value
+  String role;  // The role associated with the response (e.g., 'admin', 'user')
+
+  // Constructor to initialize the RoleResponse object with the required role
+  RoleResponse({required this.role});
 }
