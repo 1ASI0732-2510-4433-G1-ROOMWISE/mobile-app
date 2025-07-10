@@ -5,6 +5,17 @@ import 'package:sweetmanager/Monitoring/models/booking.dart';
 
 import '../models/customerr.dart';
 
+/// A service class that handles booking-related operations, including:
+/// - Creating a customer
+/// - Creating a payment for that customer
+/// - Creating a booking linked to that payment
+/// - Updating booking status
+/// - Fetching bookings by hotel ID or booking ID
+///
+/// This service communicates with the backend API using HTTP requests and
+/// uses secure storage to retrieve the authentication token.
+///
+/// All requests are authorized using a bearer token stored in secure storage.
 class BookingService {
 
   final String baseUrl = 'https://sweetmanager-api.ryzeon.me/api/bookings/';

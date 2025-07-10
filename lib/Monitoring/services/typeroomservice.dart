@@ -4,6 +4,12 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:sweetmanager/Monitoring/models/typeroom.dart';
 import 'package:http/http.dart' as http;
 
+/// A service class responsible for retrieving and processing type room data
+/// from the backend API. It fetches all room types associated with a hotel
+/// and filters out duplicates based on their IDs.
+///
+/// This service uses secure storage to retrieve the authentication token
+/// required for authorized HTTP requests.
 class TypeRoomService {
 
   final String baseUrl = 'https://sweetmanager-api.ryzeon.me/api/types-rooms/';

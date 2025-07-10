@@ -3,6 +3,14 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import '../models/room.dart';
 
+/// A service class responsible for managing room-related operations such as:
+/// - Creating a room
+/// - Updating the state of a room
+/// - Fetching all rooms by hotel ID
+/// - Fetching a specific room by its ID
+///
+/// All HTTP requests are authenticated using a bearer token retrieved from
+/// secure storage. This service interacts with the backend REST API.
 class RoomService {
 
   final String baseUrl = 'https://sweetmanager-api.ryzeon.me/api/rooms/';
