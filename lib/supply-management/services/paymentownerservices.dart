@@ -3,6 +3,14 @@ import 'package:http/http.dart' as http;
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
 
+/// A service class that manages **owner payment** operations, including:
+/// - Creating a payment record for an owner
+/// - Retrieving all payments associated with a specific owner ID
+///
+/// All HTTP requests are authorized using a bearer token stored in secure storage,
+/// and validated using JWT decoding to ensure it hasn't expired.
+///
+/// This service interacts with the backend via RESTful API endpoints.
 class PaymentOwnerService {
   final String baseUrl = 'https://sweetmanager-api.ryzeon.me';
 

@@ -3,6 +3,15 @@ import 'package:http/http.dart' as http;
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
 
+/// A service class responsible for managing **supply** operations within the system,
+/// including:
+/// - Creating, updating, and deleting supplies
+/// - Retrieving supplies by ID, hotel ID, or provider ID
+///
+/// All requests are authorized using a bearer token securely retrieved from
+/// local storage and validated using JWT decoding before each call.
+///
+/// This service communicates with a RESTful backend API.
 class SupplyService {
   final String baseUrl = 'https://sweetmanager-api.ryzeon.me';
 
