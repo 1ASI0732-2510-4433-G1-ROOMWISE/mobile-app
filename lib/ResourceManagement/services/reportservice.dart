@@ -4,6 +4,14 @@ import 'dart:convert';
 import 'package:sweetmanager/ResourceManagement/models/report.dart';
 import 'package:sweetmanager/IAM/services/auth_service.dart'; // Ensure you import your AuthService class
 
+/// A service class responsible for managing report-related operations,
+/// including:
+/// - Fetching all reports for a hotel
+/// - Retrieving a specific report by its ID
+/// - Creating a new report, optionally with a Base64-encoded image
+///
+/// This service authenticates requests using a bearer token retrieved
+/// from `AuthService`, and communicates with the backend via HTTP.
 class ReportService {
   final String baseUrl = 'https://sweetmanager-api.ryzeon.me/api';
   final authService = AuthService();

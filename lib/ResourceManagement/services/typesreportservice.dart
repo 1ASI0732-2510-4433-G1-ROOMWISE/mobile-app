@@ -3,6 +3,11 @@ import 'dart:convert';
 import 'package:sweetmanager/ResourceManagement/models/typereport.dart';
 import 'package:sweetmanager/IAM/services/auth_service.dart'; // AuthService import
 
+/// A service class that handles all **report‑type**–related operations, namely:
+/// - Fetching every available report type from the backend  
+///
+/// All requests are **authenticated** with a bearer token obtained via
+/// `AuthService`, and the service communicates with the REST API over HTTP.
 class TypesReportService {
   final String baseUrl = 'https://sweetmanager-api.ryzeon.me/api';
   final authService = AuthService();// AuthService dependency
