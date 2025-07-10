@@ -1,5 +1,7 @@
 class ContractOwners
 {
+
+  // id
   final int id;
 
   final int subscriptionId;
