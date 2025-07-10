@@ -14,7 +14,7 @@ class ComparativeIncomes {
     required this.totalProfit,
   });
 
-  factory ComparativeIncomes.fromJson(Map<String, dynamic> json) {
+  factory ComparativeIncomes.fromJson(Map<String, dynamic> json) {  /// Converts the [ComparativeIncomes] instance to a JSON-compatible map
     return ComparativeIncomes(
       weekNumber: (json['weekNumbers'] as num).toInt(), // Convert to int
       totalIncome: (json['totalIncome'] as num).toDouble(), // Convert to double
