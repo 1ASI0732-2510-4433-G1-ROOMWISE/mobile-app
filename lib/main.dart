@@ -19,7 +19,7 @@ import 'package:sweetmanager/supply-management/views/inventorymanagement.dart';
 import 'package:sweetmanager/Communication/views/writeMessage.dart';
 import 'package:sweetmanager/Communication/views/alertScreen.dart';
 import 'package:sweetmanager/Communication/views/writeAlert.dart';
-import 'firebase_options.dart'; // Import the generated options
+import 'firebase_options.dart'; // generated options.
 
 
 void main() async {
