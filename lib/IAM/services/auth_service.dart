@@ -8,6 +8,9 @@ import 'dart:convert';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 
+/// A service responsible for handling authentication-related actions,
+/// including login, sign-up for different user roles, token storage,
+/// and session validation.
 class AuthService{
   // https://sweetmanager-api.ryzeon.me/api/v1/authentication
   final String baseUrl = 'https://sweetmanager-api.ryzeon.me/api/v1/authentication';
@@ -42,6 +45,9 @@ class AuthService{
     }
   }
 
+  /// Registers a new **owner** user with the given information.
+  ///
+  /// Returns `true` if the registration is successful, otherwise `false`.
   Future<bool> signup(int id, String username, String name, String surname, String email, String phone, String password) async
   {
     try
@@ -75,6 +81,9 @@ class AuthService{
 
   }
 
+  /// Registers a new **admin** user.
+  ///
+  /// Returns `true` if the registration is successful, otherwise `false`.
   Future<bool> signupAdmin(int dni, String username, String name, String surname, String email, String phone, String password) async 
   {
     try
@@ -111,6 +120,9 @@ class AuthService{
   }
 
 
+  /// Registers a new **worker** user.
+  ///
+  /// Returns `true` if the registration is successful, otherwise `false`.
   Future<bool> signupWorker(int dni, String username, String name, String surname, String email, String phone, String password) async 
   {
     try
@@ -145,11 +157,14 @@ class AuthService{
     }
   }
 
-
+  /// Logs the user out by deleting the stored token.
   Future<void> logout() async{
     await storage.delete(key: 'token');
   }
 
+  /// Checks whether the user is currently authenticated.
+  ///
+  /// Returns `true` if a token is found in secure storage, otherwise `false`.
   Future<bool> isAuthenticated() async{
     final token = await storage.read(key: 'token');
 
